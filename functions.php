@@ -9,6 +9,26 @@ function vendorAutoLoad($className)
 
 spl_autoload_register('vendorAutoLoad');
 
+/*
+ * Simple HTML DOM Class
+ */
+require get_template_directory() . "/inc/vendor/simple_html_dom.php";
+
+/**
+ * Theme Suports
+ */
+require get_template_directory() . '/inc/theme-supports.php';
+
+/*
+ * Filter Content Gallery
+ */
+require get_template_directory() . '/inc/filter-content-gallery.php';
+
+/*
+ * Filter Content Lightbox
+ */
+require get_template_directory() . '/inc/filter-content-lightbox.php';
+
 /**
  * Enqueue Scripts
  */

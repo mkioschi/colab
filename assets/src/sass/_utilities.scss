@@ -1,0 +1,19 @@
+@mixin prefix($prop, $value) {
+  -webkit-#{$prop}: $value;
+  -moz-#{$prop}: $value;
+  #{$prop}: $value;
+}
+
+%transition {
+  @include prefix(transition, all 0.2s ease-in-out);
+}
+
+.transition {
+  @extend %transition;
+
+  *,
+  &::after,
+  &::before {
+    @extend %transition;
+  }
+}

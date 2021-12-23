@@ -1,0 +1,41 @@
+#the-content {
+  .wp-block-image {
+    figure {
+      max-width: 800px;
+
+      figcaption {
+        margin: 7px 0 0 0;
+        padding: 0;
+        font-size: 0.9rem;
+        text-align: center;
+        line-height: 1.4rem;
+        color: #777777;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    figure.size-full {
+      width: 100%;
+    }
+  }
+}
+
+// Small devices (sm)
+@media (min-width: 576px) {
+}
+
+// Medium devices (md)
+@media (min-width: 768px) {
+}
+
+// Large devices (lg)
+@media (min-width: 992px) {
+}
+
+// Extra large devices (xl)
+@media (min-width: 1200px) {
+}

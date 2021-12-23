@@ -1,0 +1,36 @@
+#the-content {
+  ul,
+  ol {
+    padding-left: 40px;
+
+    li {
+      padding: 3px 0;
+      display: list-item;
+      text-align: -webkit-match-parent;
+    }
+  }
+
+  ul {
+    list-style: disc;
+  }
+
+  ol {
+    list-style: decimal;
+  }
+}
+
+// Small devices (sm)
+@media (min-width: 576px) {
+}
+
+// Medium devices (md)
+@media (min-width: 768px) {
+}
+
+// Large devices (lg)
+@media (min-width: 992px) {
+}
+
+// Extra large devices (xl)
+@media (min-width: 1200px) {
+}

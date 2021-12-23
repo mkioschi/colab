@@ -1,0 +1,54 @@
+.home {
+  .proposito {
+    .container {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    .title-line-brush {
+      margin-bottom: 30px;
+    }
+
+    ul.row {
+      li {
+        margin-bottom: 30px;
+
+        a {
+          display: block;
+
+          .image {
+            padding-bottom: 60%;
+            margin-bottom: 10px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top center;
+            border-radius: 20px;
+          }
+
+          .name {
+            padding: 0 20px;
+            color: var(--color-primary);
+            font-size: 1.2em;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Small devices (sm)
+@media (min-width: 576px) {
+}
+
+// Medium devices (md)
+@media (min-width: 768px) {
+}
+
+// Large devices (lg)
+@media (min-width: 992px) {
+}
+
+// Extra large devices (xl)
+@media (min-width: 1200px) {
+}

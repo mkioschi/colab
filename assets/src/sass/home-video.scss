@@ -1,0 +1,102 @@
+.home {
+  .video {
+    position: relative;
+    background-color: var(--color-primary);
+    padding: 25vw 0 35vw 0;
+
+    .container {
+      background-image: url("../img/cloud.svg");
+      background-repeat: no-repeat;
+      background-size: 120px auto;
+      background-position: calc(100% - 20px) 65%;
+    }
+
+    .title {
+      justify-content: center;
+      display: flex;
+      margin-bottom: 50px;
+
+      h1 {
+        text-align: center;
+        text-transform: uppercase;
+        font-family: var(--font-headings);
+        font-weight: 700;
+        color: var(--color-background-light);
+        border-bottom: 3px solid var(--color-background-light);
+        padding-bottom: 5px;
+        line-height: 1.3em;
+
+        span {
+          font-weight: 700;
+          color: var(--color-orange-light);
+        }
+      }
+    }
+
+    .button-wrap {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+
+      .play {
+        @extend %transition;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 3px solid var(--color-background-light);
+        color: var(--color-background-light);
+        font-size: 30px;
+        width: 130px;
+        height: 120px;
+        border-radius: 20px;
+
+        &:hover {
+          border-color: var(--color-orange-light);
+          color: var(--color-orange-light);
+        }
+      }
+    }
+
+    p {
+      text-align: center;
+      color: var(--color-background-light);
+      font-size: 1em;
+    }
+  }
+}
+
+// Small devices (sm)
+@media (min-width: 576px) {
+}
+
+// Medium devices (md)
+@media (min-width: 768px) {
+}
+
+// Large devices (lg)
+@media (min-width: 992px) {
+  .home {
+    .video {
+      padding: 8vw 0 12vw 0;
+      background-color: var(--color-primary);
+
+      .container {
+        background-size: 150px auto;
+        background-position: calc(80%) 75%;
+      }
+
+      .title {
+        margin-bottom: 80px;
+
+        h1 {
+          font-size: 43px;
+        }
+      }
+    }
+  }
+}
+
+// Extra large devices (xl)
+@media (min-width: 1200px) {
+}

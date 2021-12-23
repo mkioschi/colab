@@ -4,7 +4,7 @@ const concat = require("gulp-concat");
 const uglify = require("gulp-uglify");
 
 function scss() {
-    return src("assets/src/sass/init.scss")
+    return src("assets/src/sass/**/*.scss")
         .pipe(concat("styles.min.scss"))
         .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
         .pipe(dest("assets/css"));

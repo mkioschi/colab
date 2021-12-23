@@ -1,0 +1,55 @@
+.single #the-main {
+  .title {
+    padding: 60px 0 50px 0;
+    max-width: 800px;
+  }
+
+  .cover {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--color-primary);
+    height: 45vh;
+  }
+
+  .content {
+    padding: 80px 0;
+    //max-width: 1024px;
+    margin: 0 auto;
+  }
+}
+
+// Small devices (sm)
+@media (min-width: 576px) {
+}
+
+// Medium devices (md)
+@media (min-width: 768px) {
+  .single #the-main {
+    .content {
+      padding: 100px 0;
+    }
+  }
+}
+
+// Large devices (lg)
+@media (min-width: 992px) {
+  .single #the-main {
+    .title {
+      padding: 100px 0 70px 0;
+    }
+
+    .cover {
+      height: 50vh;
+    }
+
+    .content {
+      padding: 100px 0 150px 0;
+    }
+  }
+}
+
+// Extra large devices (xl)
+@media (min-width: 1200px) {
+}

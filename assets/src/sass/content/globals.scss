@@ -1,0 +1,128 @@
+$space-between-blocks-xs: 30px;
+$space-between-blocks-sm: 30px;
+$space-between-blocks-md: 30px;
+$space-between-blocks-lg: 38px;
+$space-between-blocks-xl: 38px;
+
+#the-content {
+  margin-bottom: -#{$space-between-blocks-xs};
+
+  > *,
+  li {
+    font-size: 1.1rem;
+    line-height: 2.1rem;
+  }
+
+  > p,
+  > h1,
+  > h2,
+  > h3,
+  > h4,
+  > h5,
+  > h6,
+  > ul,
+  > ol,
+  > .wp-block-embed,
+  > .wp-block-image,
+  > .wp-block-cover,
+  > .wp-block-gallery {
+    margin-top: $space-between-blocks-xs;
+    margin-bottom: calc(#{$space-between-blocks-xs} / 2);
+  }
+}
+
+// Small devices (sm)
+@media (min-width: 576px) {
+  #the-content {
+    margin-bottom: -#{$space-between-blocks-sm};
+
+    > p,
+    > h1,
+    > h2,
+    > h3,
+    > h4,
+    > h5,
+    > h6,
+    > ul,
+    > ol,
+    > .wp-block-embed,
+    > .wp-block-image,
+    > .wp-block-cover,
+    > .wp-block-gallery {
+      margin-top: $space-between-blocks-sm;
+      margin-bottom: calc(#{$space-between-blocks-sm} / 2);
+    }
+  }
+}
+
+// Medium devices (md)
+@media (min-width: 768px) {
+  #the-content {
+    margin-bottom: -#{$space-between-blocks-md};
+
+    > p,
+    > h1,
+    > h2,
+    > h3,
+    > h4,
+    > h5,
+    > h6,
+    > ul,
+    > ol,
+    > .wp-block-embed,
+    > .wp-block-image,
+    > .wp-block-cover,
+    > .wp-block-gallery {
+      margin-top: $space-between-blocks-md;
+      margin-bottom: calc(#{$space-between-blocks-md} / 2);
+    }
+  }
+}
+
+// Large devices (lg)
+@media (min-width: 992px) {
+  #the-content {
+    margin-bottom: -#{$space-between-blocks-lg};
+
+    > p,
+    > h1,
+    > h2,
+    > h3,
+    > h4,
+    > h5,
+    > h6,
+    > ul,
+    > ol,
+    > .wp-block-embed,
+    > .wp-block-image,
+    > .wp-block-cover,
+    > .wp-block-gallery {
+      margin-top: $space-between-blocks-lg;
+      margin-bottom: calc(#{$space-between-blocks-lg} / 2);
+    }
+  }
+}
+
+// Extra large devices (xl)
+@media (min-width: 1200px) {
+  #the-content {
+    margin-bottom: -#{$space-between-blocks-xl};
+
+    > p,
+    > h1,
+    > h2,
+    > h3,
+    > h4,
+    > h5,
+    > h6,
+    > ul,
+    > ol,
+    > .wp-block-embed,
+    > .wp-block-image,
+    > .wp-block-cover,
+    > .wp-block-gallery {
+      margin-top: $space-between-blocks-xl;
+      margin-bottom: calc(#{$space-between-blocks-xl} / 2);
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.home {
+  .cover {
+    height: 85vh;
+    background-image: url('../img/home-1.jpg');
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+
+    .mask {
+      position: absolute;
+      bottom: 0;
+      width: 100vw;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+// Small devices (sm)
+@media (min-width: 576px) {
+}
+
+// Medium devices (md)
+@media (min-width: 768px) {
+}
+
+// Large devices (lg)
+@media (min-width: 992px) {
+}
+
+// Extra large devices (xl)
+@media (min-width: 1200px) {
+}

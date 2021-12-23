@@ -1,0 +1,114 @@
+#the-wrap {
+  position: relative;
+  max-width: 1920px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+#the-main {
+  border-top: solid 83px transparent;
+  background-image: url('../img/background-illustrator.svg');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: bottom;
+
+}
+
+.btn-default {
+  @extend %transition;
+
+  display: inline-block;
+  background-color: var(--color-primary);
+  line-height: 40px;
+  padding: 0 30px;
+  border-radius: 21px;
+  color: white;
+  font-family: var(--font-headings);
+  font-weight: 700;
+  text-transform: uppercase;
+
+  &:hover {
+    color: white;
+    background-color: var(--color-orange-dark);
+  }
+}
+
+.title-line-brush {
+  display: flex;
+
+  .wrap {
+    position: relative;
+
+    h1 {
+      margin-bottom: 0;
+      text-transform: uppercase;
+      font-weight: 800;
+      font-size: 33px;
+      color: var(--color-orange-dark);
+    }
+
+    .line-brush {
+      width: 100%;
+      max-width: 300px;
+
+      img {
+        width: auto;
+        height: auto;
+      }
+    }
+  }
+}
+
+.mask {
+  @include prefix(user-select, none);
+  position: absolute;
+  z-index: 99;
+  width: 100vw;
+  left: 0;
+}
+
+.mask-top {
+  top: -1px;
+}
+
+.mask-bottom {
+  bottom: -1px;
+}
+
+// Small devices (sm)
+@media (min-width: 576px) {
+}
+
+// Medium devices (md)
+@media (min-width: 768px) {
+}
+
+// Large devices (lg)
+@media (min-width: 992px) {
+  #the-main {
+    border-top: solid 93px transparent;
+  }
+
+  .title-line-brush {
+    .wrap {
+      h1 {
+        font-size: 53px;
+        line-height: 73px;
+        margin-bottom: 10px;
+      }
+
+      .line-brush {
+        max-width: unset;
+        width: 50%;
+      }
+    }
+  }
+
+}
+
+// Extra large devices (xl)
+@media (min-width: 1200px) {
+  #the-main {
+    border-top: solid 103px transparent;
+  }
+}
