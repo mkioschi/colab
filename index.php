@@ -16,11 +16,8 @@
 
     <?php get_template_part('index', 'slogan'); ?>
 
-    <section class="gallery">
-        <div class="container">
+    <?php get_template_part('index', 'galeria'); ?>
 
-        </div>
-    </section>
 </main>
 
 <?php get_footer(); ?>
