@@ -27,7 +27,7 @@
                         <img src="<?php echo get_template_directory_uri() . "/assets/img/footer-pecuaria.png" ?>" alt="">
                     </li>
                     <li>
-                        <img src="<?php echo get_template_directory_uri() . "/assets/img/footer-ilpf.png" ?>" alt="">
+                        <img src="<?php echo get_template_directory_uri() . "/assets/img/footer-ilpf.svg" ?>" alt="">
                     </li>
                     <li>
                         <img src="<?php echo get_template_directory_uri() . "/assets/img/footer-agricultura.png" ?>" alt="">

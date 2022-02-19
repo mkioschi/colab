@@ -30,11 +30,11 @@
             <div class="col-menu">
                 <nav class="menu">
                     <ul>
-                        <li><a href="#" class="transition">Início</a></li>
-                        <li><a href="#" class="transition">História</a></li>
-                        <li><a href="#" class="transition">Nosso Negócio</a></li>
-                        <li><a href="#" class="transition">Colaboradores</a></li>
-                        <li><a href="#" class="transition">Contato</a></li>
+                        <li><a href="<?php echo get_site_url(); ?>" class="transition">Início</a></li>
+                        <li><a href="<?php echo get_page_link(get_page_by_path('historia')->ID) ?>" class="transition">História</a></li>
+                        <li><a href="<?php echo get_page_link(get_page_by_path('nosso-negocio')->ID) ?>" class="transition">Nosso Negócio</a></li>
+                        <li><a href="<?php echo get_page_link(get_page_by_path('colaboradores')->ID) ?>" class="transition">Colaboradores</a></li>
+                        <li><a href="<?php echo get_page_link(get_page_by_path('contato')->ID) ?>" class="transition">Contato</a></li>
                         <li class="social-links">
                             <a href="#" class="transition"><i class="fab fa-facebook"></i></a>
                             <a href="#" class="transition"><i class="fab fa-instagram"></i></a>
