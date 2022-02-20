@@ -13,82 +13,80 @@ if (!function_exists('getAbsolutePath')) {
  * Url: https://simplehtmldom.sourceforge.io/
  */
 function filter_content_gallery($the_content) {
+    if ((is_page() || is_single()) && !is_admin() && isset($the_content) && !empty($the_content)) {
 
+        // Cria o objeto DOM.
+        $html = new simple_html_dom();
 
-  if (is_single() && !is_admin() && isset($the_content) && !empty($the_content)) {
+        // Carrega o HTML à partir da variável $the_content.
+        $html->load($the_content);
 
-    // Cria o objeto DOM.
-    $html = new simple_html_dom();
+        // Busca todos as galerias.
+        $galleries = $html->find('.wp-block-gallery');
 
-    // Carrega o HTML à partir da variável $the_content.
-    $html->load($the_content);
+        // Percorre cada galeria.
+        foreach($galleries as $gallery) {
 
-    // Busca todos as galerias.
-    $galleries = $html->find('.wp-block-gallery');
+            // Adiciona a classe css .photoswipe-gallery a cada bloco.
+            $gallery_css_classes = $gallery->getAttribute('class');
 
-    // Percorre cada galeria.
-    foreach($galleries as $gallery) {
+            $gallery->setAttribute('class', $gallery_css_classes . ' photoswipe-gallery');
 
-      // Adiciona a classe css .photoswipe-gallery a cada bloco.
-      $gallery_css_classes = $gallery->getAttribute('class');
+            // Adiciona atributos do Schema.org no bloco.
+            $gallery->setAttribute('itemscope', '');
+            $gallery->setAttribute('itemtype', 'http://schema.org/ImageGallery');
 
-      $gallery->setAttribute('class', $gallery_css_classes . ' photoswipe-gallery');
+            // Busca todos os items <figure> da galeria.
+            $figures = $gallery->find('figure');
 
-      // Adiciona atributos do Schema.org no bloco.
-      $gallery->setAttribute('itemscope', '');
-      $gallery->setAttribute('itemtype', 'http://schema.org/ImageGallery');
+            // Inicializa o índice de figuras.
+            $figure_index = 0;
 
-      // Busca todos os items <figure> da galeria.
-      $figures = $gallery->find('figure');
+            // Percorre cada item <figure>.
+            foreach($figures as $figure) {
 
-      // Inicializa o índice de figuras.
-      $figure_index = 0;
+                // Adiciona atributos do Schema.org na <figure>.
+                $figure->setAttribute('itemprop', 'associatedMedia');
+                $figure->setAttribute('itemscope', '');
+                $figure->setAttribute('itemtype', 'http://schema.org/ImageObject');
 
-      // Percorre cada item <figure>.
-      foreach($figures as $figure) {
+                // Adiciona atributos do Schema.org no <a> e as dimensões da imagem.
+                $a = $figure->find('a')[0];
 
-        // Adiciona atributos do Schema.org na <figure>.
-        $figure->setAttribute('itemprop', 'associatedMedia');
-        $figure->setAttribute('itemscope', '');
-        $figure->setAttribute('itemtype', 'http://schema.org/ImageObject');
+                if ($a) {
+                    $a->setAttribute('itemprop', 'contentUrl');
+                    $a->setAttribute('data-index', $figure_index);
 
-        // Adiciona atributos do Schema.org no <a> e as dimensões da imagem.
-        $a = $figure->find('a')[0];
+                    // Dimensões da imagem.
+                    $image_url = $a->getAttribute('href');
 
-        if ($a) {
-          $a->setAttribute('itemprop', 'contentUrl');
-          $a->setAttribute('data-index', $figure_index);
+                    $image_sizes = getimagesize(getAbsolutePath($image_url));
 
-          // Dimensões da imagem.
-          $image_url = $a->getAttribute('href');
+                    $a->setAttribute('data-size', $image_sizes[0] . 'x' . $image_sizes[1]);
+                }
 
-          $image_sizes = getimagesize(getAbsolutePath($image_url));
+                // Adiciona atributos do Schema.org no <figcaption>.
+                $figcaption = $figure->find('figcaption')[0];
 
-          $a->setAttribute('data-size', $image_sizes[0] . 'x' . $image_sizes[1]);
+                if ($figcaption) {
+                    $figcaption->setAttribute('itemprop', 'caption description');
+                }
+
+                //Incrementa ao índice.
+                $figure_index++;
+            }
         }
 
-        // Adiciona atributos do Schema.org no <figcaption>.
-        $figcaption = $figure->find('figcaption')[0];
+        // Sobescreve a variável $the_content com o novo conteúdo.
+        $the_content = $html->save();
 
-        if ($figcaption) {
-          $figcaption->setAttribute('itemprop', 'caption description');
-        }
+        // Limpa a memória!
+        $html->clear();
 
-        //Incrementa ao índice.
-        $figure_index++;
-      }
+        unset($html);
     }
 
-    // Sobescreve a variável $the_content com o novo conteúdo.
-    $the_content = $html->save();
-
-    // Limpa a memória!
-    $html->clear();
-
-    unset($html);
-  }
-
-  return $the_content;
+    return $the_content;
 }
 
 add_filter('the_content', 'filter_content_gallery');

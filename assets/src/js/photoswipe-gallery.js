@@ -48,9 +48,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
         item.title = figcaption.innerText;
       }
 
-      // Recupera o "src" da tag <img> dentro do <a>. Necessário para animação do "getThumbBoundsFn".
-      item.msrc = aElement.getElementsByTagName("img")[0].getAttribute("src");
-
       // Salva o elemento <figure>. Necessário para animação do "getThumbBoundsFn".
       item.figureElement = aElement.parentElement;
 
@@ -85,20 +82,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
       index: index,
       history: false,
       shareEl: false,
-
-      // Ref: https://photoswipe.com/documentation/options.html
-      getThumbBoundsFn: function(index) {
-        var thumbnail = items[index].figureElement.getElementsByTagName(
-          "img"
-        )[0];
-
-        var pageYScroll =
-          window.pageYOffset || document.documentElement.scrollTop;
-
-        var rect = thumbnail.getBoundingClientRect();
-
-        return { x: rect.left, y: rect.top + pageYScroll, w: rect.width };
-      }
     };
 
     // Inicializa o PhotoSwipe
