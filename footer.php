@@ -9,14 +9,14 @@
                 <ul class="enderecos row">
                     <li class="col col-lg-6">
                         <h3>Altônia - PR</h3>
-                        <p><span><i class="fas fa-map-marker-alt"></i></span> Rod. PR 389 - KM1</p>
-                        <p><span><i class="fas fa-phone"></i></span> (44) 99999-9999</p>
+                        <p><span><i class="fas fa-map-marker-alt"></i></span> Rod. PR 496 km 25</p>
+                        <p><span><i class="fas fa-phone"></i></span> (44) 99764-1987</p>
                     </li>
 
                     <li class="col col-lg-6">
                         <h3>Xambrê - PR</h3>
-                        <p><span><i class="fas fa-map-marker-alt"></i></span> Rod. PR 389 - KM1</p>
-                        <p><span><i class="fas fa-phone"></i></span> (44) 99999-9999</p>
+                        <p><span><i class="fas fa-map-marker-alt"></i></span> Estrada Cascata KM 16</p>
+                        <p><span><i class="fas fa-phone"></i></span> (44) 98402-1697</p>
                     </li>
                 </ul>
             </div>
@@ -24,13 +24,13 @@
             <div class="col-selos col-12 col-lg-5">
                 <ul class="selos">
                     <li>
-                        <img src="<?php echo get_template_directory_uri() . "/assets/img/footer-pecuaria.png" ?>" alt="">
+                        <img src="<?php echo get_template_directory_uri() . "/assets/img/footer-pecuaria.svg" ?>" alt="">
                     </li>
                     <li>
                         <img src="<?php echo get_template_directory_uri() . "/assets/img/footer-ilpf.svg" ?>" alt="">
                     </li>
                     <li>
-                        <img src="<?php echo get_template_directory_uri() . "/assets/img/footer-agricultura.png" ?>" alt="">
+                        <img src="<?php echo get_template_directory_uri() . "/assets/img/footer-agricultura.svg" ?>" alt="">
                     </li>
                 </ul>
             </div>

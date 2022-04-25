@@ -19,7 +19,7 @@
 
             <div class="col-logo">
                 <a href="<?php echo get_site_url(); ?>" class="logo">
-                    <img src="<?php echo get_template_directory_uri() . "/assets/img/logo-white.png" ?>" alt="Logo">
+                    <img src="<?php echo get_template_directory_uri() . "/assets/img/logo-white.svg" ?>" alt="Logo">
                 </a>
 
                 <a href="#" class="toogle-menu">
@@ -36,8 +36,9 @@
                         <li><a href="<?php echo get_page_link(get_page_by_path('colaboradores')->ID) ?>" class="transition">Colaboradores</a></li>
                         <li><a href="<?php echo get_page_link(get_page_by_path('contato')->ID) ?>" class="transition">Contato</a></li>
                         <li class="social-links">
-                            <a href="#" class="transition"><i class="fab fa-facebook"></i></a>
-                            <a href="#" class="transition"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/colaboradoresdobrasil/" target="_blank" class="transition"><i class="fab fa-facebook"></i></a>
+                            <a href="#" target="_blank" class="transition"><i class="fab fa-instagram"></i></a>
+                            <a href="#" target="_blank" class="transition"><i class="fab fa-youtube"></i></a>
                         </li>
                     </ul>
                 </nav>
