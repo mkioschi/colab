@@ -15,7 +15,7 @@ $items = [
     3 => [
         'small' => "$galeriaBaseUrl/small/item-3.jpg",
         'large' => "$galeriaBaseUrl/large/item-3.jpg",
-        'size' => '1920x1280'
+        'size' => '672x759'
     ],
     4 => [
         'small' => "$galeriaBaseUrl/small/item-4.jpg",
@@ -25,7 +25,7 @@ $items = [
     5 => [
         'small' => "$galeriaBaseUrl/small/item-5.jpg",
         'large' => "$galeriaBaseUrl/large/item-5.jpg",
-        'size' => '1920x1280'
+        'size' => '755x820'
     ],
     6 => [
         'small' => "$galeriaBaseUrl/small/item-6.jpg",
@@ -35,17 +35,17 @@ $items = [
     7 => [
         'small' => "$galeriaBaseUrl/small/item-7.jpg",
         'large' => "$galeriaBaseUrl/large/item-7.jpg",
-        'size' => '1920x1280'
+        'size' => '1280x1920'
     ],
     8 => [
         'small' => "$galeriaBaseUrl/small/item-8.jpg",
         'large' => "$galeriaBaseUrl/large/item-8.jpg",
-        'size' => '1920x1280'
+        'size' => '1620x1080'
     ],
     9 => [
         'small' => "$galeriaBaseUrl/small/item-9.jpg",
         'large' => "$galeriaBaseUrl/large/item-9.jpg",
-        'size' => '1920x1280'
+        'size' => '1620x1080'
     ],
 ];
 ?>
