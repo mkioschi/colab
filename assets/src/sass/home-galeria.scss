@@ -37,12 +37,11 @@ $padding-item: 6px;
               background-position: center;
               background-size: cover;
 
-              // Provisório
               display: flex;
-              color: white;
+              color: transparent;
               justify-content: center;
               align-items: center;
-              background-color: gray;
+              background-color: var(--color-primary);
             }
           }
         }
