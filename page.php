@@ -13,6 +13,12 @@
                                 <img src="<?php echo get_template_directory_uri() . "/assets/img/title-trace-orange-reverse.svg" ?>" alt="">
                             </div>
                         </h1>
+
+                        <?php if (has_excerpt()):?>
+                            <div class="excerpt">
+                                <?php the_excerpt(); ?>
+                            </div>
+                        <?php endif; ?>
                     </div>
                 </div>
             </header>

@@ -15,7 +15,18 @@
       color: var(--color-orange-dark);
     }
 
+    .excerpt {
+      padding-top: 20px;
+
+      p {
+        color: var(--color-primary);
+        font-size: 15px;
+        font-weight: 500;
+      }
+    }
+
     .line-brush {
+      padding-top: 3px;
       width: 90%;
 
       img {
@@ -64,15 +75,15 @@
 @media (min-width: 992px) {
   .page {
     #the-title {
-      padding: 90px 0 75px 0;
+      padding: 70px 0 75px 0;
 
       .wrap {
-        width: 60%;
+        width: 70%;
       }
 
       h1 {
-        font-size: 53px;
-        line-height: 65px;
+        font-size: 43px;
+        line-height: 52px;
       }
 
       .line-brush {
