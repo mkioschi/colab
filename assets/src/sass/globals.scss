@@ -6,7 +6,7 @@
 }
 
 #the-main {
-  border-top: solid 83px transparent;
+  border-top: solid 70px transparent;
   background-image: url('../img/background-illustrator.svg');
   background-repeat: no-repeat;
   background-size: 100% auto;
@@ -86,7 +86,7 @@
 // Large devices (lg)
 @media (min-width: 992px) {
   #the-main {
-    border-top: solid 93px transparent;
+    border-top: solid 94px transparent;
   }
 
   .title-line-brush {
@@ -108,7 +108,4 @@
 
 // Extra large devices (xl)
 @media (min-width: 1200px) {
-  #the-main {
-    border-top: solid 103px transparent;
-  }
 }

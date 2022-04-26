@@ -2,13 +2,12 @@
 
 <main id="the-main">
     <section class="cover">
-        <div id="video-wrapper" class="d-none d-lg-block">
+        <div class="gradient"></div>
+
+        <div id="video-wrapper">
             <video poster="<?php echo get_template_directory_uri() . "/assets/img/home-1.jpg" ?>" id="video" playsinline autoplay muted loop>
-                <?php if ("computer" == "computer"): ?>
-                    <source src="<?php echo get_template_directory_uri() . "/assets/videos/background/1280x720.webm" ?>" type="video/webm">
-                <?php else: ?>
-                    <source src="<?php echo get_template_directory_uri() . "/assets/videos/background/390x800.webm" ?>" type="video/webm">
-                <?php endif; ?>
+                <source src="<?php echo get_template_directory_uri() . "/assets/videos/background/1280x720.webm" ?>" type="video/webm">
+                <source src="<?php echo get_template_directory_uri() . "/assets/videos/background/1280x720.mp4" ?>" type="video/mp4">
             </video>
         </div>
 

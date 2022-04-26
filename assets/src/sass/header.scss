@@ -2,11 +2,13 @@
   background-color: var(--color-primary);
   position: fixed;
   width: 100%;
-  padding: 20px 0;
   z-index: 999;
   max-width: 1920px;
   margin: 0 auto;
   overflow-x: hidden;
+  height: 70px;
+  display: flex;
+  align-items: center;
 
   .content {
     .col-logo {
@@ -80,7 +82,7 @@
 // Large devices (lg)
 @media (min-width: 992px) {
   #the-header {
-    padding: 25px 0;
+    height: 94px;
 
     .content {
       display: flex;
@@ -91,7 +93,7 @@
         display: block;
 
         .logo {
-          width: 220px;
+          width: 240px;
         }
 
         .toogle-menu {
@@ -140,8 +142,6 @@
 // Extra large devices (xl)
 @media (min-width: 1200px) {
   #the-header {
-    padding: 30px 0;
-
     .content {
       .col-menu {
         nav.menu {
