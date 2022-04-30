@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
-<main id="the-main">
-    <?php if (have_posts()): the_post(); ?>
+<?php if (have_posts()): the_post(); ?>
+    <main id="the-main">
         <article>
             <header id="the-title" class="<?php if (has_post_thumbnail()) echo "with-cover"; ?>" style="background-image: url('<?php the_post_thumbnail_url( 'large' ) ?>')">
                 <div class="gradient"></div>
@@ -50,7 +50,7 @@
                 </div>
             </div>
         </article>
-    <?php endif; ?>
-</main>
+    </main>
+<?php endif; ?>
 
 <?php get_footer(); ?>

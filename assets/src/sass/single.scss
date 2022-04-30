@@ -1,22 +1,98 @@
-.single #the-main {
-  .title {
-    padding: 60px 0 50px 0;
-    max-width: 800px;
+.single {
+  #the-title.with-cover {
+    h1 {
+      color: white;
+    }
+
+    .excerpt {
+      p {
+        color: white;
+      }
+    }
+
+    .gradient {
+      display: block;
+    }
   }
 
-  .cover {
+  #the-title {
     position: relative;
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;
-    background-color: var(--color-primary);
-    height: 45vh;
+
+    .gradient {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.15);
+      z-index: 0;
+    }
+
+    .mask {
+      position: relative;
+    }
+
+    .container {
+      position: relative;
+      padding-top: 70px;
+      padding-bottom: 60px;
+    }
+
+    .wrap {
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    h1 {
+      display: inline-block;
+      margin-bottom: 0;
+      text-transform: uppercase;
+      font-weight: 800;
+      font-size: 33px;
+      color: var(--color-orange-dark);
+      text-align: center;
+    }
+
+    .excerpt {
+      padding-top: 20px;
+
+      p {
+        text-align: center;
+        color: var(--color-primary);
+        font-size: 15px;
+        font-weight: 500;
+      }
+    }
+
+    .line-brush {
+      padding-top: 3px;
+      width: 90%;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
   }
 
-  .content {
+  #the-content {
+    min-height: 200px;
+  }
+
+  #frase {
     padding: 80px 0;
-    //max-width: 1024px;
-    margin: 0 auto;
+
+    h2 {
+      font-weight: 700;
+      font-size: 21px;
+      line-height: 30px;
+      text-transform: uppercase;
+      color: var(--color-primary);
+      text-align: center;
+    }
   }
 }
 
@@ -26,30 +102,63 @@
 
 // Medium devices (md)
 @media (min-width: 768px) {
-  .single #the-main {
-    .content {
-      padding: 100px 0;
-    }
-  }
 }
 
 // Large devices (lg)
 @media (min-width: 992px) {
-  .single #the-main {
-    .title {
-      padding: 100px 0 70px 0;
+  .single {
+    #the-title {
+      .gradient {
+        background: rgb(0,0,0);
+        background: linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%);
+      }
+
+      .container {
+        padding-top: 80px;
+        padding-bottom: 60px;
+      }
+
+      .wrap {
+        width: 70%;
+        margin: unset;
+      }
+
+      h1 {
+        font-size: 43px;
+        line-height: 52px;
+        text-align: unset;
+      }
+      .excerpt p {
+        text-align: unset;
+      }
+
+      .line-brush {
+        width: 80%;
+      }
     }
 
-    .cover {
-      height: 50vh;
-    }
+    #frase {
+      padding: 150px 0;
 
-    .content {
-      padding: 100px 0 150px 0;
+      h2 {
+        font-size: 27px;
+        line-height: 37px;
+      }
     }
   }
 }
 
 // Extra large devices (xl)
 @media (min-width: 1200px) {
+  .single {
+    #the-title {
+      .wrap {
+        width: 50%;
+      }
+    }
+
+    #frase {
+      padding: 180px 0;
+    }
+  }
 }
