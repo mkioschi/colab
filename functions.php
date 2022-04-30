@@ -44,6 +44,11 @@ require get_template_directory() . '/inc/body-classes.php';
  */
 require get_template_directory() . '/inc/remove-admin-bar.php';
 
+/*
+ * Mobile Detect
+ */
+require get_template_directory() . '/inc/mobile-detect.php';
+
 /**
  * Register Menus
  */

@@ -6,8 +6,13 @@
 
         <div id="video-wrapper">
             <video poster="<?php echo get_template_directory_uri() . "/assets/img/home-1.jpg" ?>" id="video" playsinline autoplay muted loop>
-                <source src="<?php echo get_template_directory_uri() . "/assets/videos/background/1280x720.webm" ?>" type="video/webm">
-                <source src="<?php echo get_template_directory_uri() . "/assets/videos/background/1280x720.mp4" ?>" type="video/mp4">
+                <?php if (DEVICE_TYPE == 'computer'): ?>
+                    <source src="<?php echo get_template_directory_uri() . "/assets/videos/background/desktop.webm" ?>" type="video/webm">
+                    <source src="<?php echo get_template_directory_uri() . "/assets/videos/background/desktop.mp4" ?>" type="video/mp4">
+                <?php else: ?>
+                    <source src="<?php echo get_template_directory_uri() . "/assets/videos/background/mobile.webm" ?>" type="video/webm">
+                    <source src="<?php echo get_template_directory_uri() . "/assets/videos/background/mobile.mp4" ?>" type="video/mp4">
+                <?php endif; ?>
             </video>
         </div>
 
