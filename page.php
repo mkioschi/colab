@@ -3,15 +3,23 @@
 <main id="the-main">
     <?php if (have_posts()): the_post(); ?>
         <article>
-            <header id="the-title">
+            <header id="the-title" class="<?php if (has_post_thumbnail()) echo "with-cover"; ?>" style="background-image: url('<?php the_post_thumbnail_url( 'large' ) ?>')">
+                <div class="gradient"></div>
+
                 <div class="container">
                     <div class="wrap">
                         <h1>
                             <?php the_title(); ?>
-                            <br>
-                            <div class="line-brush">
-                                <img src="<?php echo get_template_directory_uri() . "/assets/img/title-trace-orange-reverse.svg" ?>" alt="">
-                            </div>
+                            <?php if (has_excerpt()):?>
+                                <br>
+                                <div class="line-brush d-none d-lg-block">
+                                    <?php if (has_post_thumbnail()):?>
+                                        <img src="<?php echo get_template_directory_uri() . "/assets/img/title-trace-white-reverse.svg" ?>" alt="">
+                                    <?php else: ?>
+                                        <img src="<?php echo get_template_directory_uri() . "/assets/img/title-trace-orange-reverse.svg" ?>" alt="">
+                                    <?php endif; ?>
+                                </div>
+                            <?php endif; ?>
                         </h1>
 
                         <?php if (has_excerpt()):?>
@@ -21,21 +29,14 @@
                         <?php endif; ?>
                     </div>
                 </div>
-            </header>
 
-            <?php if (has_post_thumbnail()):?>
-                <div id="the-cover" style="background-image: url('<?php the_post_thumbnail_url( 'large' ) ?>')">
-                    <div class="mask mask-top">
-                        <img class="d-lg-none" src="<?php echo get_template_directory_uri() . "/assets/img/mask-light-mobile-top.svg" ?>">
-                        <img class="d-none d-lg-block" src="<?php echo get_template_directory_uri() . "/assets/img/mask-light-desktop-top.svg" ?>">
-                    </div>
-
+                <?php if (has_post_thumbnail()):?>
                     <div class="mask mask-bottom">
                         <img class="d-lg-none" src="<?php echo get_template_directory_uri() . "/assets/img/mask-light-mobile-bottom.svg" ?>">
                         <img class="d-none d-lg-block" src="<?php echo get_template_directory_uri() . "/assets/img/mask-light-desktop-bottom.svg" ?>">
                     </div>
-                </div>
-            <?php endif; ?>
+                <?php endif; ?>
+            </header>
 
             <div class="container">
                 <div id="the-content">
