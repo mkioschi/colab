@@ -5,7 +5,7 @@
   z-index: 999;
   max-width: 1920px;
   margin: 0 auto;
-  overflow-x: hidden;
+  //overflow-x: hidden;
   height: 70px;
   display: flex;
   align-items: center;
@@ -18,7 +18,7 @@
 
       .logo {
         display: block;
-        width: 220px;
+        width: 240px;
 
         img {
           width: 100%;
@@ -35,6 +35,12 @@
 
     .col-menu {
       nav.menu {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background-color: var(--color-primary);
+        width: 100%;
+
         padding: 35px 0 5px 0;
         display: none;
 
@@ -93,7 +99,7 @@
         display: block;
 
         .logo {
-          width: 240px;
+          width: 260px;
         }
 
         .toogle-menu {
@@ -103,6 +109,12 @@
 
       .col-menu {
         nav.menu {
+          position: unset;
+          top: unset;
+          left: unset;
+          background-color: unset;
+          width: unset;
+
           padding: 0;
           display: block;
 

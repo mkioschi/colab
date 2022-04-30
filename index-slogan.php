@@ -6,7 +6,7 @@
         </div>
 
         <div class="container">
-            <h1>Semear para Transformar</h1>
+            <h1>Uma semente que carrega uma história</h1>
         </div>
 
         <div class="mask mask-bottom">

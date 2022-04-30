@@ -38,7 +38,7 @@
                         <li class="social-links">
                             <a href="https://www.facebook.com/colaboradoresdobrasil/" target="_blank" class="transition"><i class="fab fa-facebook"></i></a>
                             <a href="#" target="_blank" class="transition"><i class="fab fa-instagram"></i></a>
-                            <a href="#" target="_blank" class="transition"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.youtube.com/channel/UCSa9tQALiA-ef-tMmOxH2LQ" target="_blank" class="transition"><i class="fab fa-youtube"></i></a>
                         </li>
                     </ul>
                 </nav>
