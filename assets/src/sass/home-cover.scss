@@ -1,32 +1,27 @@
+$videoDesktopWidth: 1280;
+$videoDesktopHeight: 720;
+$coverDesktopHeight: 75vh;
+$videoMobileWidth: 520;
+$videoMobileHeight: 800;
+
 .home {
   .cover {
-    height: 85vh;
     position: relative;
 
-    //.gradient {
-    //  position: absolute;
-    //  width: 100%;
-    //  height: 100%;
-    //  background: rgb(0,0,0);
-    //  background: linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%);
-    //}
-
     #video-wrapper {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      overflow: hidden
-    }
+      position: relative;
+      height: calc((100vw / #{$videoMobileWidth}) * #{$videoMobileHeight});
+      overflow: hidden;
 
-    #video-wrapper #video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      min-width: 100%;
-      min-height: 100%;
-      width: auto;
-      height: auto;
-      z-index: -100;
+      #video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: calc((100vw / #{$videoMobileWidth}) * #{$videoMobileHeight});
+        width: 100%;
+        height: auto;
+      }
     }
 
     .mask {
@@ -52,6 +47,25 @@
 
 // Large devices (lg)
 @media (min-width: 992px) {
+  .home {
+    .cover {
+      #video-wrapper {
+        position: relative;
+        height: $coverDesktopHeight;
+        overflow: hidden;
+
+        #video {
+          position: absolute;
+          top: calc((((100vw / #{$videoDesktopWidth}) * #{$videoDesktopHeight}) - #{$coverDesktopHeight}) / 2 * -1);
+          left: 0;
+          min-width: 100%;
+          min-height: calc((100vw / #{$videoDesktopWidth}) * #{$videoDesktopHeight});
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
 }
 
 // Extra large devices (xl)
