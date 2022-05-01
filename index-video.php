@@ -1,3 +1,14 @@
+<div id="video-lightbox" class="video-ligthbox">
+    <div class="lightbox-inner">
+        <div class="content">
+            <a href="#" id="btn-close-video" class="btn-close-video"><span>[X] Fechar</span></a>
+            <div class="video-wrap">
+                <div class="video-target"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <section class="video">
     <div class="mask mask-top">
         <img class="d-lg-none" src="<?php echo get_template_directory_uri() . "/assets/img/mask-light-mobile-top.svg" ?>">
@@ -10,7 +21,7 @@
         </div>
 
         <div class="button-wrap">
-            <a href="#" class="play"><i class="fas fa-play"></i></a>
+            <a id="btn-open-video" href="https://www.youtube.com/watch?v=lDm-L_9U3iU" data-video-id="lDm-L_9U3iU" class="play"><i class="fas fa-play"></i></a>
         </div>
 
         <p>
