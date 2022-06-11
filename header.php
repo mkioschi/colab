@@ -19,7 +19,7 @@
 
             <div class="col-logo">
                 <a href="<?php echo get_site_url(); ?>" class="logo">
-                    <img src="<?php echo get_template_directory_uri() . "/assets/img/logo-white.svg" ?>" alt="Logo">
+                    <img src="<?php echo get_template_directory_uri() . "/assets/img/logo-oficial-white.svg" ?>" alt="Logo">
                 </a>
 
                 <a href="#" class="toogle-menu">

@@ -21,7 +21,7 @@
         </div>
 
         <div class="button-wrap">
-            <a id="btn-open-video" href="https://www.youtube.com/watch?v=lDm-L_9U3iU" data-video-id="lDm-L_9U3iU" class="play"><i class="fas fa-play"></i></a>
+            <a id="btn-open-video" href="https://www.youtube.com/watch?v=R8moI5zqmWA" data-video-id="R8moI5zqmWA" class="play"><i class="fas fa-play"></i></a>
         </div>
 
         <p>
